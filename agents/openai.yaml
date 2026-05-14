@@ -1,0 +1,3 @@
+display_name: SEO SuperSkill
+short_description: Audit and implement technical, local, structured-data, AEO, and programmatic SEO.
+default_prompt: Audit this site or codebase for SEO issues, prioritize the findings, implement the highest-impact fixes, and verify the result.
