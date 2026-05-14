@@ -12,6 +12,8 @@ It helps with:
 - Programmatic SEO planning
 - Answer-engine optimization
 
+It intentionally stays inside SEO. It is not a paid ads, generic copywriting, social media, or general analytics skill.
+
 ## Install
 
 Copy this folder into your Codex skills directory:
@@ -28,10 +30,23 @@ Run the static HTML checker against a single file or a built output directory:
 
 ```bash
 python scripts/seo_supercheck.py dist
-python scripts/seo_supercheck.py dist --json
+python scripts/seo_supercheck.py dist --base-url https://example.com --json
 ```
 
 The checker exits with status `1` when critical issues are found.
+
+Checks include:
+
+- Missing or duplicate titles, descriptions, H1s, and canonicals
+- Robots noindex/nofollow/nosnippet directives
+- Robots.txt whole-site blocks and unsupported noindex directives
+- Sitemap parse errors, duplicate URLs, invalid URLs, and 50,000 URL limit
+- JSON-LD syntax, multiple JSON-LD scripts, arrays, and `@graph`
+- Heading hierarchy jumps
+- Missing image alt attributes
+- Hreflang duplicates and relative hreflang URLs
+- Local broken links in static output
+- Sitemap/noindex conflicts
 
 ## Scope
 
@@ -40,4 +55,3 @@ This tool is intentionally conservative. It catches common mechanical SEO issues
 ## License
 
 MIT
-

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Noindex: /legacy/
+
+Sitemap: https://example.com/sitemap.xml
+

@@ -48,7 +48,7 @@ For local service businesses:
 
 ### Programmatic SEO
 
-Common playbooks:
+Common page patterns:
 - Locations: `[service] in [city]`
 - Directories: `[category] tools/services`
 - Comparisons: `[x] vs [y]`, `[x] alternatives`
@@ -81,12 +81,20 @@ Make answer extraction easy:
 Use `scripts/seo_supercheck.py` on static HTML or production build output:
 
 ```bash
-python /Users/joshuanewberry/.codex/skills/seo-superskill/scripts/seo_supercheck.py dist
-python /Users/joshuanewberry/.codex/skills/seo-superskill/scripts/seo_supercheck.py dist --json
+python scripts/seo_supercheck.py dist
+python scripts/seo_supercheck.py dist --base-url https://example.com --json
 ```
 
 For local apps:
 - Build first when the framework has static output.
 - Otherwise run the dev/preview server and inspect rendered HTML with browser automation.
 - Check that metadata is present in the initial response/rendered head, not only after user interaction.
+- Compare the sitemap against canonical URLs and noindex directives.
+- Check duplicate titles, duplicate descriptions, duplicate canonicals, heading jumps, local broken links, and JSON-LD syntax before calling an audit done.
 
+## What The Checker Does Not Prove
+
+- It does not measure rankings, impressions, CTR, crawl stats, or index coverage.
+- It does not guarantee rich results or AI citations.
+- It does not fetch HTTP headers, so `X-Robots-Tag` must be checked with browser/network tools or `curl -I`.
+- It does not replace a rendered browser pass for client-heavy apps.
