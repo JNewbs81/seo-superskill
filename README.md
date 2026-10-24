@@ -11,6 +11,9 @@ It helps with:
 - Local SEO implementation guidance
 - Programmatic SEO planning
 - Answer-engine optimization
+- Editorial guides and useful topic clusters
+- Live production HTTP checks
+- Evidence-based performance, query and competitor gap analysis
 
 It intentionally stays inside SEO. It is not a paid ads, generic copywriting, social media, or general analytics skill.
 
@@ -47,6 +50,26 @@ Checks include:
 - Hreflang duplicates and relative hreflang URLs
 - Local broken links in static output
 - Sitemap/noindex conflicts
+
+## Live checker
+
+For a public HTTPS site with a same-origin URL sitemap:
+
+```bash
+python scripts/seo_livecheck.py https://newberrybail.com > live-report.json
+```
+
+The live checker checks up to 100 sitemap URLs by default (explicit limits up to 500), canonical matching, potential HTTP/meta noindex directives, same-origin assets, robots/sitemap delivery and a nonexistent-page 404 probe. It exits with status `1` on detected delivery/indexability failures. Redirect warnings are reported separately. It does not traverse sitemap indexes; select a child URL sitemap workflow for larger sites. Reports include response headers and should be reviewed before sharing.
+
+This is a read-only HTTP check, not an indexing submission, browser-rendering test or Core Web Vitals measurement. A passing check does not prove rankings, rich-result eligibility or Google indexing.
+
+## Extended guidance
+
+- `references/editorial-seo.md`: useful articles, factual sourcing, internal links and maintenance.
+- `references/evidence-and-gaps.md`: lab versus field performance, current Google feature eligibility, site identity, domain variants, and query/competitor evidence.
+- `references/standards.md`: maintained primary-source references.
+
+Use each site's own verified business information. The reusable skill contains no Amy-specific contact details or deployment credentials.
 
 ## Scope
 

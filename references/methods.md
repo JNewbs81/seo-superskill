@@ -28,9 +28,9 @@ For each target page:
 Use JSON-LD. Select schema based on visible content:
 - `LocalBusiness` or subtype for real business/location pages.
 - `Organization` for company identity.
-- `WebSite` with `SearchAction` when site search exists.
+- `WebSite` for site identity; use SearchAction only for an actual documented consumer, not the retired Google sitelinks search box.
 - `BreadcrumbList` for breadcrumb navigation.
-- `FAQPage` only when visible FAQs are present.
+- Keep visible FAQs useful; Google FAQ rich results retired in May 2026. FAQPage may describe real FAQs for other consumers, but is not a Google enhancement.
 - `Article`/`BlogPosting` for editorial pages.
 - `Product` only for actual product offers.
 - `Service` for service pages when details are visible.
@@ -74,7 +74,7 @@ Make answer extraction easy:
 - Use lists/tables for comparisons and procedural answers.
 - Cite authoritative sources when factual claims depend on external data.
 - Keep important content crawlable in rendered HTML.
-- Use FAQ/HowTo schema only when the visible page truly contains that content.
+- Do not promise Google FAQ or HowTo rich results; those features retired. Use schema only for matching visible content and an actual intended purpose.
 
 ## Verification
 

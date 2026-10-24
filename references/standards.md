@@ -23,3 +23,9 @@ Principles to preserve:
 - JavaScript pages need crawlable, renderable content and unblocked resources.
 - Helpful pages should provide original, complete, people-first information rather than pages generated primarily to manipulate rankings.
 - Do not use spam tactics such as cloaking, doorway pages, hidden text/link abuse, keyword stuffing, scraped-content abuse, or fake business claims.
+
+Additional maintained checks:
+- Google documentation changelog and retired features: https://developers.google.com/search/updates
+- Google site-name preferences: https://developers.google.com/search/docs/appearance/site-names
+- Core Web Vitals measurement: https://web.dev/articles/vitals
+- PageSpeed field versus lab data: https://developers.google.com/speed/docs/insights/v5/about

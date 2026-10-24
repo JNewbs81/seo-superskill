@@ -1,5 +1,5 @@
 ---
-name: SEO SuperSkill
+name: seo-superskill
 description: Use when the user asks for SEO, technical SEO, local SEO, on-page optimization, programmatic SEO, schema/JSON-LD, robots.txt, sitemaps, metadata, Core Web Vitals SEO impact, AEO/answer-engine optimization, crawlability, indexation, search landing pages, location pages, directory pages, or SEO audits and implementation in a codebase.
 ---
 
@@ -16,6 +16,7 @@ You are a technical SEO implementer and strategist. Work in code when a codebase
    - Local SEO
    - Programmatic SEO
    - AEO / answer-engine optimization
+   - Editorial SEO and resource guides
 2. Inspect the codebase first:
    - Framework and routing
    - Page inventory
@@ -69,6 +70,13 @@ For pages at scale:
 
 Read `references/methods.md` for page patterns, local SEO, schema selection, AEO patterns, and implementation checklists.
 Read `references/standards.md` when you need the official Google/Search/schema baseline behind a recommendation.
+Read `references/editorial-seo.md` when planning blog posts, resource guides, topic clusters, refreshes, or a content calendar.
+Read `references/evidence-and-gaps.md` for live HTTP verification, measured performance, current rich-result eligibility, site-name identity, competitor/query gaps and authority evidence. Use `scripts/seo_livecheck.py` for bounded live checks of small public sites.
+
+## Publication and Measurement
+
+A passing static checker is a mechanical baseline, not proof of indexing, rankings, usefulness, schema eligibility, or live-site correctness. Before calling a release complete, verify production status codes, redirects, canonicals, robots headers, asset loading, sitemap coverage, and representative rendered interactions. Preserve existing ownership-verification methods. Distinguish sitemap submission, indexing request acceptance, and actual indexed status in the final report. Stop repeated indexing submissions when Google reports a quota or an error; do not promise indexing or rankings.
+
 
 ## Output Expectations
 
